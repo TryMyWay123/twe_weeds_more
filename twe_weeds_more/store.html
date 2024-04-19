@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-image: radial-gradient(#00e600, white, purple);
+        }
+        .card {
+            display: inline-block;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+            margin: auto;
+            text-align: center;
+            font-family: arial;
+            padding: 12px;
+            margin: 24px;
+            position: relative;
+            left: 100px;
+
+        }
+
+        .price {
+            color: grey;
+            font-size: 22px;
+        }
+
+        .card button {
+            border: none;
+            outline: 0;
+            padding: 12px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+        }
+
+            .card button:hover {
+                opacity: 0.7;
+            }
+
+        .overlay {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0, 0.9);
+            overflow-x: hidden;
+            transition: 0.5s;
+        }
+
+        .overlay-content {
+            position: relative;
+            top: 25%;
+            width: 100%;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .overlay a {
+            padding: 8px;
+            text-decoration: none;
+            font-size: 36px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+            .overlay a:hover, .overlay a:focus {
+                color: #f1f1f1;
+            }
+
+        .overlay .closebtn {
+            position: absolute;
+            top: 20px;
+            right: 45px;
+            font-size: 60px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .overlay a {
+                font-size: 20px
+            }
+
+            .overlay .closebtn {
+                font-size: 40px;
+                top: 15px;
+                right: 35px;
+            }
+        }
+
+        span {
+            position: relative;
+            top: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <a href="index.html">Home</a>
+            <a href="contact.html">Contact</a>
+            <a href="store.html">Store</a>
+        </div>
+    </div>
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+    <h2 style="text-align:center">TWE weeds Store</h2>
+
+    <div class="card">
+        <img src="marijuana.jpg" alt="Marijuana" style="width:100%">
+        <h1>weeds 1g</h1>
+        <p class="price">$10.00</p>
+        <p>S-Rex aka Skunk Rex.</p>
+        <p><button>Add to Cart</button></p>
+    </div>
+
+    <div class="card">
+        <img src="marijuana.jpg" alt="Marijuana" style="width:100%">
+        <h1>weeds 2g</h1>
+        <p class="price">$20.00</p>
+        <p>S-Rex aka Skunk Rex.</p>
+        <p><button>Add to Cart</button></p>
+    </div>
+
+    <div class="card">
+        <!--Fix the images-->
+        <img src="marijuana.jpg" alt="Marijuana" style="width:100%">
+        <h1>weeds 5g</h1>
+        <p class="price">50.00</p>
+        <p>S-Rex aka Skunk Rex.</p>
+        <p><button>Add to Cart</button></p>
+    </div>
+
+    <div class="card">
+        <img src="marijuana.jpg" alt="Marijuana" style="width:100%">
+        <h1>weeds 10gs</h1>
+        <p class="price">$100.00</p>
+        <p>S-Rex aka Skunk Rex.</p>
+        <p><button>Add to Cart</button></p>
+    </div>
+    <hr />
+
+    <!--Add a game pass to the subscription -->
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
+</body>
+</html>
+\
